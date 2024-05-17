@@ -1,0 +1,30 @@
+Sites :
+ name
+ edges
+ Status
+
+Edeges :
+ name
+ hostname
+ serial number
+ site
+
+Gateways :
+ name 
+ region
+ type
+ status
+
+
+NetWork :
+	vendor
+	projet
+	emsType
+	emsLocation
+	Provising state
+	operationalStatus
+	BuildPackage
+	RunPackage
+	license
+	supportLevel
+	Versions

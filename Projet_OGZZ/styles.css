@@ -1,0 +1,238 @@
+
+
+
+
+body{
+    font-family: Inter, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: none;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+}
+section{
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border-bottom: 1px lightgrey solid;
+}
+.flex-row{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+
+.state_svg{
+    width: 15%;
+    height: 15%;
+}
+button{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+/*----------------------------------------NETWORK NAME, 3 BOUTONS, et fil d'ariane-------------------------*/
+nav{
+    display: flex;
+}
+#network-name{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+#actions{
+    display: flex;
+    gap: 1%;
+}
+
+#actions button{
+    padding: 0%;
+    border: none;
+}
+
+#actions button:not(:last-child)::after{   /*permet de faire le séparateur entre les boutons ref: https://stackoverflow.com/questions/41631136/add-dividing-line-between-flex-items-with-equal-space-distribution + w3school (::after) */
+    content: " ";
+    width: 0px;
+    height: 100%;
+    border: 1px solid lightgray;
+}
+
+#trash{
+    color: lightgrey;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+#info-section{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border : none;
+}
+
+
+
+
+/*---------------------------------------------------INFO SUR LE NETWORK-------------------------------------------*/
+#card-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    column-gap: 2%;
+    row-gap: 15px;
+}
+hgroup{
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+#state, #status{                   /*c'est mieux d'avoir des id, pour pouvoir afficher les bons svg avec le js*/
+    border: 2px solid lightgrey;
+    display: flex;
+    justify-content: center;
+}
+.group-title{
+    margin: 0;
+    margin-bottom: 2%;
+    color: rgb(128, 128, 128);
+}
+.group-text{
+    margin: 0;
+    font-size: 100%;
+}
+
+#description{
+    width: 75%;
+}
+
+
+/*-------------------------------------STYLE SPECIFIQUE STATUT---------------------------------------------------*/
+#state .group-text{
+    background-color: #18ff18;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+}
+#down, #degraded{
+    display: none;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*------------------------TOPO DES SITE, REGION, EDGES ECT SOUS FORME DE CARTES DE VISITE-----------------------*/
+#summary{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 2%;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 18%;
+    padding-right: 15%;
+    border : 2px solid lightgrey;
+}
+.leftSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.leftSide > h2{
+    margin: 0;
+    color: orange;
+    font-size: 180%;
+}
+.leftSide > p{
+    margin: 0;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+
+
+#search-bar{
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+
+
+#leftBox{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.onglet{
+    border: none;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    background-color: none;
+}
+
+.onglet:focus{
+    border-bottom: 3px solid orange;
+    margin-bottom: -1px;
+}
+
+#rightBox{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 5%;
+    padding: 0%;
+}
+#text-input{
+    height: 100%;
+    border: none;
+    border-bottom: 2px solid grey;
+    padding-right: 1%;
+}
+
+#text-input > *{
+    height: 95%;
+    border: none;
+}
+
+#text-input > input:focus-visible{
+    outline: none;
+}
+
+/*-------------------------------------- media --------------------------------------*/
+
+@media screen and (max-width : 850px){
+    #card-grid{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    #summary
+    {
+        display: flex;
+        overflow: auto;
+        white-space: nowrap;
+
+    }
+
+
+    #description{
+        width: 100%;
+    }
+    #search-bar{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #rightBox{
+        justify-content: space-between;
+    }
+    #rightBox .search{
+        height: 70px;
+    }
+
+
+
+}

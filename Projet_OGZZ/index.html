@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <section>
+            <nav>
+                <p> Home <strong> > </strong> </p>
+                <p> Networking <strong> > </strong> </p>
+                <p> Flexible <strong> > </strong> </p>
+                <p> Network name </p>
+            </nav>
+        </section>
+        
+        <section>
+            <div id="network-name">
+                <h1>Network Name</h1>
+                <div class="flex-row">
+                    <img src="assets/state_down.svg">
+                    <p>Close</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="actions">
+
+                <button class="flex-row" id="trash">
+                    <img src="assets/Trash.svg">
+                    <p>Delete</p> <!--changer la couleur avec js si y'a des choses selectionnés-->
+                </button>
+
+                <button class="flex-row">
+                    <img src="assets/Reload.svg">
+                    <p>Refresh</p>
+                </button>
+            </div>
+        </section>
+
+        <section id="info-section">
+                <div id="card-grid">
+<!--                     
+                    <hgroup>
+                        <p class="group-title">Vendor</p>
+                        <p class="group-text">text</p>
+                    </hgroup>
+                    <hgroup>
+                        <p class="group-title">Project</p>
+                        <p class="group-text">text</p>
+                    </hgroup>
+                    <hgroup>
+                        <p class="group-title">EMS Type</p>
+                        <p class="group-text">text</p>
+                    </hgroup>
+                    <hgroup>
+                        <p class="group-title">EMS Location</p>
+                        <p class="group-text">text</p>
+                    </hgroup>
+                    <hgroup id="state">
+                        <div>
+                            <p class="group-title">Provising state</p>
+                            <p class="group-text">text</p>
+                        </div>
+                    </hgroup>
+                    <hgroup id="status">
+                        <div>
+                            <p class="group-title">Operational Status</p>
+
+                            <div class="flex-row" id="up">
+                                <img src="assets/state_up.svg" class="state_svg">
+                                <p class="group-text">Up</p>
+                            </div>
+                            <div class="flex-row" id="degraded">
+                                <img src="assets/state_degraded.svg" class="state_svg">
+                                <p class="group-text">Degraded</p>
+                            </div>
+                            <div class="flex-row" id="down">
+                                <img src="assets/state_down.svg" class="state_svg">
+                                <p class="group-text">Down</p>
+                            </div>
+
+                        </div>
+                    </hgroup>
+                    <hgroup>
+                        <p class="group-title">Build package</p>
+                        <p class="group-text">text</p>
+                    </hgroup>
+                    <hgroup>
+                        <p class="group-title">Run Package</p>
+                        <p class="group-text">text</p>
+                    </hgroup>
+                    <hgroup>
+                        <p class="group-title">Default license edition</p>
+                        <p class="group-text">text</p>
+                    </hgroup>
+                    <hgroup>
+                        <p class="group-title">Vendor support level</p>
+                        <p class="group-text">text</p>
+                    </hgroup>
+                    <hgroup>
+                        <p class="group-title">Version EMS</p>
+                        <p class="group-text">text</p>
+                    </hgroup> -->
+                </div>
+
+                <div id="description">
+                    <!-- <p class="group-title">Description</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi dolorem quos qui eos! Dicta eligendi minus voluptate, et laboriosam fugit natus veniam officia inventore id autem harum animi in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sit quisquam possimus non rerum ducimus, totam praesentium quas obcaecati, esse ratione atque impedit animi, consectetur architecto saepe quod beatae mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aliquid similique fugit nulla, provident perferendis ex tempore dignissimos repellat voluptatum impedit eos. Cupiditate itaque quibusdam perspiciatis dolores officiis sit repellat?</p>-->
+                </div>
+
+                <div id="summary">
+                    <div class="cards">
+                        <div class="leftSide">
+                            <h2>5</h2>
+                            <p>Regions</p>
+                        </div>
+                        <div class="rightSide">
+                            <div class="flex-row">                              
+                                <img src="assets/state_up.svg" class="state_svg">
+                                <p class="group-text">3 Up</p>
+                            </div>
+                            <div class="flex-row">
+                                <img src="assets/state_degraded.svg" class="state_svg">
+                                <p class="group-text">1 Degraded</p>
+                            </div>
+                            <div class="flex-row">
+                                <img src="assets/state_down.svg" class="state_svg">
+                                <p class="group-text">1 Down</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="leftSide">
+                            <h2>4</h2>
+                            <p>Gateway</p>
+                        </div>
+                        <div class="rightSide">
+                            <div class="flex-row">
+                                <img src="assets/state_up.svg" class="state_svg">
+                                <p class="group-text">3 Up</p>
+                            </div>
+                            <div class="flex-row">
+                                <img src="assets/state_degraded.svg" class="state_svg">
+                                <p class="group-text">1 Degraded</p>
+                            </div>
+                            <div class="flex-row">
+                                <img src="assets/state_down.svg" class="state_svg">
+                                <p class="group-text">1 Down</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="leftSide">
+                            <h2>6</h2>
+                            <p>text1</p>
+                        </div>
+                        <div class="rightSide">
+                            <div class="flex-row">                              
+                                <img src="assets/state_up.svg" class="state_svg">
+                                <p class="group-text">Up</p>
+                            </div>
+                            <div class="flex-row">
+                                <img src="assets/state_degraded.svg" class="state_svg">
+                                <p class="group-text">Degraded</p>
+                            </div>
+                            <div class="flex-row">
+                                <img src="assets/state_down.svg" class="state_svg">
+                                <p class="group-text">Down</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="leftSide">
+                            <h2>0</h2>
+                            <p>text1</p>
+                        </div>
+                        <div class="rightSide">
+                            <div class="flex-row">                              
+                                <img src="assets/state_up.svg" class="state_svg">
+                                <p class="group-text">Up</p>
+                            </div>
+                            <div class="flex-row">
+                                <img src="assets/state_degraded.svg" class="state_svg">
+                                <p class="group-text">Degraded</p>
+                            </div>
+                            <div class="flex-row">
+                                <img src="assets/state_down.svg" class="state_svg">
+                                <p class="group-text">Down</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+        <section id="search-bar">
+            <div id="leftBox">
+                <button class="onglet group-text">Regions</button>
+                <button class="onglet group-text">Sites</button>
+                <button class="onglet group-text">Gateway</button>
+                <button class="onglet group-text">Edges</button>
+                <button class="onglet group-text">Maps</button>
+            </div>
+            <div id="rightBox">
+                <div class="flex-row search" id="text-input">
+                    <input type="text" placeholder="Search for a product, ressource or anything">
+                    <button><img src="assets/search.svg" ></button>
+                </div>
+                <div class="flex-row" id="filter">
+                    <img src="assets/filter.svg">
+                    <button class="group-text">Filter</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="script.js" type="text/javascript"></script>
+</html>
